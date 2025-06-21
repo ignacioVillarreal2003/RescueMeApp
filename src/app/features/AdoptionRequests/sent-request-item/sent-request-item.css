@@ -1,0 +1,46 @@
+.sent-request-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sent-request-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.sent-request-item__title {
+  font-size: var(--fs-subtitle);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sent-request-item__message {
+  font-size: var(--fs-body);
+}
+
+.sent-request-item__status {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sent-request-item__status-text {
+  font-size: var(--fs-h3);
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.APPROVED {
+  background-color: var(--blue);
+}
+
+.DECLINED {
+  background-color: var(--red);
+}

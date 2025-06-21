@@ -66,7 +66,7 @@ export class BackgroundManagement {
   }
 
   private applyBackgroundClass(background: string): void {
-    const main: HTMLElement = document.querySelector(".main-page__background") as HTMLElement;
+    const main: HTMLElement = document.querySelector(".Main-page__background") as HTMLElement;
     main.style.backgroundImage = `url(/backgrounds/${background})`;
   }
 }

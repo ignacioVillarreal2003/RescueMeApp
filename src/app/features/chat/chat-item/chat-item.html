@@ -1,5 +1,0 @@
-<button class="chat-item" id="chat-item-{{petition.id}}" (click)="openChat()" *ngIf="petition && me">
-  <span class="chat-item__full-name" *ngIf="me == petition.requestingUser.id">{{ petition.requestedPet.ownerUser.firstName }} {{ petition.requestedPet.ownerUser.lastName }}</span>
-  <span class="chat-item__full-name" *ngIf="me == petition.requestedPet.ownerUser.id">{{ petition.requestingUser.firstName }} {{ petition.requestingUser.lastName }}</span>
-  <span class="chat-item__initials">{{ getInitials() }}</span>
-</button>

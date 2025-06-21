@@ -1,0 +1,19 @@
+.chats-sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.chats-sidebar__title {
+  font-size: var(--fs-subtitle);
+}
+
+.chats-sidebar__chat-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #f5f1f6;
+  overflow-y: auto;
+}

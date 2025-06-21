@@ -1,0 +1,14 @@
+@if (pet) {
+  <app-section-glass>
+    <div class="pet-details-page">
+      <app-carousel [images]="images"></app-carousel>
+      <app-pet-overview [pet]="pet"></app-pet-overview>
+      <div class="pet-details-page__pet-petition">
+        <button class="pet-details-page__petition-btn"
+                (click)="openModal()">Adopt me</button>
+      </div>
+      <app-owner-overview [ownerUser]="pet.ownerUser"></app-owner-overview>
+    </div>
+  </app-section-glass>
+}
+

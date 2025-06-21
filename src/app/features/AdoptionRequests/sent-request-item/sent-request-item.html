@@ -1,0 +1,23 @@
+@if (petition != undefined) {
+  <app-section-glass [type]="'type-2'">
+    <div class="sent-request-item">
+      <header class="sent-request-item__header">
+        <h1 class="sent-request-item__title">{{ petition.requestedPet.name }}</h1>
+        <app-icon-btn [icon]="'cruelty_free'"
+                      (click)="goToPete()"></app-icon-btn>
+      </header>
+
+      <form [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+        <app-textarea-form [label]="'Message'"
+                           [placeholder]="'Message'"
+                           formControlName="message"
+                           [error]="getErrorMessage('message')"></app-textarea-form>
+      </form>
+
+      <div class="sent-request-item__status">
+        <h3 class="sent-request-item__status-text" [ngClass]="statusClass(petition.status)">{{ statusClass(petition.status) }}</h3>
+      </div>
+    </div>
+  </app-section-glass>
+}

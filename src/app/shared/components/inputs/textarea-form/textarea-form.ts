@@ -44,9 +44,9 @@ export class TextareaForm {
   }
 
   updateValue(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
+    const inputElement = event.target as HTMLTextAreaElement;
     this.value = inputElement.value;
     this.onChange(this.value);
-    this.isActive = true
+    this.isActive = true;
   }
 }

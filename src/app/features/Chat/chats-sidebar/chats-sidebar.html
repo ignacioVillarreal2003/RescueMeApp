@@ -1,0 +1,10 @@
+<section class="chats-sidebar">
+  <h1 class="chats-sidebar__title">Chats</h1>
+  <ul class="chats-sidebar__chat-list">
+    @for (chat of chats; track chat.id) {
+      <li><app-chat-preview [chat]="chat"
+                            [userId]="userId"
+                            [chatId]="chatId"></app-chat-preview></li>
+    }
+  </ul>
+</section>

@@ -1,0 +1,19 @@
+.pet-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 0;
+}
+
+.pet-details-page__pet-petition {
+  display: flex;
+  justify-content: center;
+}
+
+.pet-details-page__petition-btn {
+  padding: 15px 40px;
+  background-color: #201f1f;
+  color: white;
+  font-size: var(--fs-h2);
+  border-radius: var(--radius-pill);
+}

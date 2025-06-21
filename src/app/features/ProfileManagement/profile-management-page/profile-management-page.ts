@@ -5,9 +5,6 @@ import {ThemeManagement} from '../theme-management/theme-management';
 import {BackgroundManagement} from '../background-management/background-management';
 import {User} from '../../../core/models/user';
 import {SessionService} from '../../../core/services/session/session.service';
-import {Message} from '../../../core/models/message';
-import {Pet} from '../../../core/models/pet';
-import {Petition} from '../../../core/models/petition';
 
 @Component({
   selector: 'app-profile-management-page',

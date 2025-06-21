@@ -1,0 +1,64 @@
+.user-public-profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.user-public-profile-page__header {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--pink);
+}
+
+.user-public-profile-page__profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  border-radius: 10px;
+  max-width: calc(100% - 30px);
+}
+
+.user-public-profile-page__profile img {
+  width: 48px;
+  height: 48px;
+}
+
+.user-public-profile-page__title {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-public-profile-page__sub-title {
+  font-size: var(--fs-subtitle);
+  padding: 5px 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: var(--bg-layer-1);
+}
+
+.user-public-profile-page__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.user-public-profile-page__table td {
+  padding: 12px 15px;
+  border: 1px solid var(--separator-color);
+  text-align: left;
+  font-size: clamp(10px, 2.8vw, 18px);
+}

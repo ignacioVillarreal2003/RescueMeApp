@@ -1,0 +1,26 @@
+<header class="header">
+  <app-section-glass [rounded]="'--radius-pill'" [padding]="'--padding-sm'">
+    <div class="header__container">
+      <a routerLink="/main/pets-dashboard"
+         class="header__title">RescueMe</a>
+      <nav class="header__nav-bar">
+        <a routerLink="/main/pets-dashboard"
+           class="header__icon-home">
+          <mat-icon class="material-symbols-rounded filled">home</mat-icon>
+        </a>
+        <a routerLink="/main/pet-list-manager">
+          <mat-icon class="material-symbols-rounded filled">pets</mat-icon>
+        </a>
+        <a routerLink="/main/adoption-requests">
+          <mat-icon class="material-symbols-rounded filled">favorite</mat-icon>
+        </a>
+        <a routerLink="/main/chat">
+          <mat-icon class="material-symbols-rounded filled">forum</mat-icon>
+        </a>
+        <a routerLink="/main/profile-management">
+          <mat-icon class="material-symbols-rounded filled">person</mat-icon>
+        </a>
+      </nav>
+    </div>
+  </app-section-glass>
+</header>

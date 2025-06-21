@@ -1,0 +1,12 @@
+@if (petitions.length > 0) {
+  <app-section-glass>
+    <section class="adoption-requests-page">
+      <h1 class="adoption-requests-page__title">Adoption requests</h1>
+      <ul class="adoption-requests-page__list">
+        @for (petition of petitions; track petition.id) {
+          <li><app-sent-request-item [petition]="petition"></app-sent-request-item></li>
+        }
+      </ul>
+    </section>
+  </app-section-glass>
+}

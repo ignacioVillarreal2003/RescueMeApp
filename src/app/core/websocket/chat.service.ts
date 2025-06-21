@@ -24,7 +24,7 @@ export class ChatService {
         'Authorization': 'Bearer ' + token
       }, () => {
         console.log('Connected to the server');
-        socketClient.subscribe('/chat/' + chatId, (notification: any) => {
+        socketClient.subscribe('/Chat/' + chatId, (notification: any) => {
           const body: any = JSON.parse(notification.body);
           const status: string = body.status;
           const message: Message = body.message;

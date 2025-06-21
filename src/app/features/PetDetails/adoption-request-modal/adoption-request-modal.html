@@ -1,0 +1,14 @@
+<app-modal [title]="'Petition'"
+           (onClose)="close()">
+  <form class="adoption-request-modal"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()">
+    <app-textarea-form [placeholder]="'Message'"
+                       formControlName="message"
+                       [label]="'Message'"
+                       [error]="getErrorMessage('message')"></app-textarea-form>
+    <app-text-btn [text]="'Submit'"
+                  [buttonType]="'submit'"
+                  [disabled]="form.invalid || loaderService.loading()"></app-text-btn>
+  </form>
+</app-modal>

@@ -36,7 +36,7 @@ export class AdoptionRequestItem {
 
   goToProfile(): void {
     if (this.petition != undefined) {
-      this.router.navigate([`/public-profile/${this.petition.requestingUser.id}`]);
+      this.router.navigate([`main/user-public-profile/${this.petition.requestingUser.id}`]);
     }
   }
 
