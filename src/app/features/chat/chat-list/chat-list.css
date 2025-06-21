@@ -1,0 +1,12 @@
+.chat-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #f5f1f6;
+  overflow-y: auto;
+}
+
+.chat-list__item {
+  width: 100%;
+}

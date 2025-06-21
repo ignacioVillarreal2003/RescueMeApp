@@ -1,0 +1,43 @@
+<form [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="register-form">
+  <header class="register-form__header">
+    <h1 class="register-form__title">Sign up</h1>
+  </header>
+  <section class="register-form__inputs-container">
+    <app-input-form [placeholder]="'Email'"
+                    [label]="'Email'"
+                    formControlName="email"
+                    [error]="getErrorMessage('email')"></app-input-form>
+    <app-input-form [placeholder]="'Password'"
+                    [label]="'Password'"
+                    [type]="'password'"
+                    formControlName="password"
+                    [error]="getErrorMessage('password')"></app-input-form>
+    <app-input-form [placeholder]="'First name'"
+                    [label]="'First name'"
+                    formControlName="firstName"
+                    [error]="getErrorMessage('firstName')"></app-input-form>
+    <app-input-form [placeholder]="'Last name'"
+                    [label]="'Last name'"
+                    formControlName="lastName"
+                    [error]="getErrorMessage('lastName')"></app-input-form>
+    <app-input-form [placeholder]="'Phone'"
+                    [label]="'Phone'"
+                    formControlName="phone"
+                    [error]="getErrorMessage('phone')"></app-input-form>
+    <app-input-form [placeholder]="'Address'"
+                    [label]="'Address'"
+                    formControlName="address"
+                    [error]="getErrorMessage('address')"></app-input-form>
+    <app-text-btn [text]="'Register'"
+                  [buttonType]="'submit'"
+                  [disabled]="form.invalid || loaderService.loading()"
+                  style="width: 100%"></app-text-btn>
+  </section>
+  <span class="register-form__line"></span>
+  <footer class="register-form__footer">
+    <a routerLink="/auth/login"
+       class="register-form__link">Sign in</a>
+  </footer>
+</form>

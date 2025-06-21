@@ -1,0 +1,11 @@
+<form class="send-message-form"
+      [formGroup]="sendMessageForm"
+      (ngSubmit)="onSubmit()">
+  <input class="send-message-form__input"
+         type="text"
+         formControlName="content"
+         placeholder="Escribe un mensaje..."/>
+  <button class="send-message-form__send">
+    <img src="./icons/send_48dp_000000_FILL0_wght300_GRAD200_opsz48.svg">
+  </button>
+</form>

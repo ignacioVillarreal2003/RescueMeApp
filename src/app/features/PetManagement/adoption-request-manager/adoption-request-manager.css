@@ -1,0 +1,16 @@
+.adoption-request-manager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: 10px 0;
+}
+
+.adoption-request-manager__title {
+  font-size: var(--fs-h3);
+}
+
+.adoption-request-manager__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}

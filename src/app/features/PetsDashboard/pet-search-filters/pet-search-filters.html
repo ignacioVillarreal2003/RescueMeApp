@@ -1,0 +1,34 @@
+<app-modal [title]="'Filters'"
+           (onClose)="close()">
+  <div class="pet-search-filters">
+    <section class="pet-search-filters__filters">
+      <app-range-filter #ageFilter
+                        [title]="'Age'"
+                        [minValue]="0"
+                        [maxValue]="30"
+                        [savedValue]="age"></app-range-filter>
+      <app-options-filter #sexFilter
+                          [title]="'Sex'"
+                          [options]="SexValues"
+                          [savedValues]="sexList"></app-options-filter>
+      <app-options-filter #sizeFilter
+                          [title]="'Size'"
+                          [options]="SizeValues"
+                          [savedValues]="sizeList"></app-options-filter>
+      <app-options-filter #specieFilter
+                          [title]="'Species'"
+                          [options]="SpeciesValues"
+                          [savedValues]="speciesList"></app-options-filter>
+    </section>
+    <footer class="pet-search-filters__footer">
+      <app-text-btn [text]="'Apply filters'"
+                    [color]="'primary'"
+                    style="width: 100%"
+                    (click)="applyFilters()"></app-text-btn>
+      <app-text-btn [text]="'Reset filters'"
+                    [color]="'secondary'"
+                    style="width: 100%"
+                    (click)="resetFilters()"></app-text-btn>
+    </footer>
+  </div>
+</app-modal>

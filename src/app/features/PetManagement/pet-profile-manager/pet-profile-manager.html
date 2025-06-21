@@ -1,0 +1,56 @@
+@if (pet != undefined) {
+  <app-section-glass>
+    <section class="pet-profile-manager">
+      <h1 class="pet-profile-manager__title">Pet profile manager</h1>
+      <form class="pet-profile-manager__form"
+            [formGroup]="form">
+        <app-input-form [placeholder]="'Name'"
+                        [label]="'Name'"
+                        formControlName="name"
+                        [error]="getErrorMessage('name')"></app-input-form>
+        <app-textarea-form [label]="'Description'"
+                           [placeholder]="'Description'"
+                           formControlName="description"
+                           [error]="getErrorMessage('description')"></app-textarea-form>
+        <app-select-form [label]="'Species'"
+                         formControlName="species"
+                         [options]="speciesValues"></app-select-form>
+        <app-input-form [placeholder]="'Age'"
+                        [type]="'number'"
+                        [label]="'Age'"
+                        formControlName="age"
+                        [error]="getErrorMessage('age')"></app-input-form>
+        <app-select-form [label]="'Size'"
+                         formControlName="size"
+                         [options]="sizeValues"></app-select-form>
+        <app-select-form [label]="'Sex'"
+                         formControlName="sex"
+                         [options]="sexValues"></app-select-form>
+        <app-select-form [label]="'State'"
+                         formControlName="state"
+                         [options]="stateValues"></app-select-form>
+        <app-input-form [placeholder]="'Breed'"
+                        [label]="'Breed'"
+                        formControlName="breed"
+                        [error]="getErrorMessage('breed')"></app-input-form>
+        <app-input-form [placeholder]="'Color'"
+                        [label]="'Color'"
+                        formControlName="color"
+                        [error]="getErrorMessage('color')"></app-input-form>
+        <app-checkbox-form [label]="'Vaccinated'"
+                           formControlName="vaccinated"></app-checkbox-form>
+        <app-checkbox-form [label]="'Castrated'"
+                           formControlName="castrated"></app-checkbox-form>
+        <app-checkbox-form [label]="'Dewormed'"
+                           formControlName="dewormed"></app-checkbox-form>
+        <app-textarea-form [label]="'Medical notes'"
+                           [placeholder]="'Medical notes'"
+                           formControlName="medicalNotes"
+                           [error]="getErrorMessage('medicalNotes')"></app-textarea-form>
+      </form>
+      <app-text-btn [text]="'Delete pet'"
+                    (click)="delete()"
+                    [color]="'danger'"></app-text-btn>
+    </section>
+  </app-section-glass>
+}

@@ -1,0 +1,6 @@
+<div class="message-item" [ngClass]="getDirection()" *ngIf="message">
+  <div class="message-item__content-wrapper">
+    <p>{{ message.content }}</p>
+    <span>{{ message.createdAt.slice(0, 10) }} {{ message.createdAt.slice(11, 16) }}</span>
+  </div>
+</div>

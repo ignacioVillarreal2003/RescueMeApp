@@ -1,0 +1,52 @@
+.background-management {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.background-management__title {
+  font-size: var(--fs-h3);
+}
+
+.background-management__background-list {
+  display: flex;
+  gap: var(--spacing-md);
+  width: 100%;
+  height: 140px;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.background-management__background-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.background-management__background-item {
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.background-management__btn-background {
+  width: 100%;
+  height: 100%;
+  filter: brightness(.4);
+  transition: all var(--transition-fast) ease;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.background-management__btn-background:hover {
+  filter: brightness(1);
+}
+
+.active .background-management__btn-background {
+  filter: brightness(1);
+}
+
+.background-management__btn-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}

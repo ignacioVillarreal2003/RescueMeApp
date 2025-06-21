@@ -1,0 +1,12 @@
+<div class="modal">
+  <div class="modal__container">
+    <header class="modal__header">
+      <h1 class="modal__title">{{title}}</h1>
+      <app-icon-btn [icon]="'close'"
+                    [background]="'red'"
+                    [rounded]="'--radius-circle'"
+                    (click)="close()"></app-icon-btn>
+    </header>
+    <ng-content></ng-content>
+  </div>
+</div>

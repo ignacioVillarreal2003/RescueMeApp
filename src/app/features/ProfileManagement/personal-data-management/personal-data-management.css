@@ -1,0 +1,29 @@
+.personal-data-management {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.personal-data-management__title {
+  font-size: var(--fs-h3);
+}
+
+.personal-data-management__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+app-input-form {
+  flex-basis: calc(50% - 5px);
+}
+
+@media (max-width: 800px) {
+  .personal-data-management__form {
+    flex-direction: column;
+  }
+
+  app-input-form {
+    flex-basis: 100%;
+  }
+}

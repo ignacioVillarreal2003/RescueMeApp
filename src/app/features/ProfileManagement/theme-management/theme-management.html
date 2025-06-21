@@ -1,0 +1,22 @@
+@if (user != undefined) {
+  <app-section-glass>
+    <div class="theme-management">
+      <h1 class="theme-management__title">Theme management</h1>
+      <div class="theme-management__theme-list">
+        @for (theme of themeList; track theme.id) {
+          <label [for]="'theme-form-option-' + theme.id"
+                 class="theme-management__theme-item"
+                 [class.active]="theme.value == currentTheme">
+            <input [id]="'theme-form-option-' + theme.id"
+                   [value]="theme.value"
+                   name="theme-form-option"
+                   type="radio"
+                   [checked]="theme.value == currentTheme"
+                   (change)="onThemeChange(theme.value)">
+            <p>{{theme.name}}</p>
+          </label>
+        }
+      </div>
+    </div>
+  </app-section-glass>
+}

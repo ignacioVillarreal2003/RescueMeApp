@@ -1,0 +1,29 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+label {
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+}
+
+input {
+  width: 100%;
+  background-color: var(--bg-layer-4);
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: var(--color-text-primary);
+  border: none;
+  font-size: var(--fs-body);
+}
+
+input:focus-visible {
+  outline: 3px solid var(--blue);
+}
+
+span {
+  font-size: var(--fs-body);
+  color: var(--red);
+}

@@ -1,0 +1,17 @@
+.pet-search-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.pet-search-filters__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.pet-search-filters__footer {
+  width: 100%;
+  display: flex;
+  gap: var(--spacing-md);
+}

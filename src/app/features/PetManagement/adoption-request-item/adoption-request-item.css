@@ -1,0 +1,79 @@
+.adoption-request-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.adoption-request-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.adoption-request-item__title {
+  font-size: var(--fs-subtitle);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.adoption-request-item__message {
+  font-size: var(--fs-body);
+}
+
+.adoption-request-item__status {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adoption-request-item__status-text {
+  font-size: var(--fs-h3);
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.APPROVED {
+  background-color: var(--blue);
+}
+
+.DECLINED {
+  background-color: var(--red);
+}
+
+.adoption-request-item__footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.adoption-request-item__btn-accept,
+.adoption-request-item__btn-reject {
+  width: 100%;
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: none;
+}
+
+.adoption-request-item__btn-accept {
+  background-color: var(--blue);
+}
+
+.adoption-request-item__btn-reject {
+  background-color: var(--red);
+}
+
+.adoption-request-item__footer mat-icon{
+  --size: 36px;
+  width: var(--size);
+  height: var(--size);
+  font-size: var(--size);
+}

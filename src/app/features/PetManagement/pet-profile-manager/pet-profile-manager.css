@@ -1,0 +1,16 @@
+.pet-profile-manager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: 10px 0;
+}
+
+.pet-profile-manager__title {
+  font-size: var(--fs-h3);
+}
+
+.pet-profile-manager__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}

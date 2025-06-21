@@ -1,0 +1,221 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--spacing-md);
+  border: var(--border-strong);
+  padding: var(--padding-xs);
+  border-radius: var(--radius-md);
+}
+
+.filter__btn-open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all var(--transition-fast) ease-in-out;
+}
+
+.filter__btn-open:hover {
+  background-color: var(--bg-layer-4);
+}
+
+.filter__title {
+  font-size: var(--fs-subtitle);
+}
+
+.filter__btn-open mat-icon {
+  --size: 32px;
+  width: var(--size);
+  height: var(--size);
+  font-size: var(--size);
+  color: var(--color-text-primary);
+}
+
+.filter__option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter__option-item {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter__option-text {
+  font-size: clamp(16px, 2.6vw, 18px);
+  color: var(--color-text-primary);
+}
+
+.filter__option-item:hover .filter__option-text {
+  color: var(--blue);
+}
+
+.filter__btn-option {
+  width: 100%;
+}
+
+.filter__preview-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__preview-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: 10px 20px;
+  border: var(--border-light);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.filter__preview-option {
+  font-size: clamp(12px, 2.4vw, 14px);
+  color: var(--color-text-primary);
+}
+
+.filter__preview-item mat-icon {
+  --size: 24px;
+  width: var(--size);
+  height: var(--size);
+  font-size: calc(var(--size) - 6px);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-circle);
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter__btn-remove-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  border: none;
+  border-radius: var(--radius-circle);
+  padding: 3px;
+}
+
+.filter__btn-remove-all mat-icon {
+  --size: 26px;
+  width: var(--size);
+  height: var(--size);
+  font-size: var(--size);
+  color: var(--color-text-primary);
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.ios-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.ios-checkbox input {
+  display: none;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition-fast) ease;
+}
+
+.checkbox-bg {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #93c5fd;
+  border-radius: 8px;
+  background: white;
+  transition: all var(--transition-fast) ease;
+}
+
+.checkbox-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  color: white;
+  transform: scale(0);
+  transition: transform var(--transition-fast) ease;
+}
+
+.check-path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset var(--transition-slow) ease 0.1s;
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper {
+  animation: bounce var(--transition-slow) ease;
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper .checkbox-bg {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper .checkbox-icon {
+  transform: scale(1);
+}
+
+.ios-checkbox input:checked + .checkbox-wrapper .check-path {
+  stroke-dashoffset: 0;
+}
+
+.ios-checkbox:hover .checkbox-wrapper {
+  transform: scale(1.05);
+}
+
+.ios-checkbox:active .checkbox-wrapper {
+  transform: scale(0.95);
+}
+
+.ios-checkbox input:focus + .checkbox-wrapper .checkbox-bg {
+  box-shadow: 0 0 0 4px #dbeafe;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 800px) {
+  .filter__btn-open {
+    padding: var(--spacing-sm);
+  }
+
+  .filter__preview-item {
+    padding: 6px 12px;
+  }
+}

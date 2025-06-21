@@ -1,0 +1,27 @@
+.main-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page__background {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/backgrounds/background-7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-page__content-container {
+  padding: var(--padding-xl);
+}
+
+@media (max-width: 800px) {
+  .main-page__content-container {
+    padding: var(--padding-sm);
+  }
+}

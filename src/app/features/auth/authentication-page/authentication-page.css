@@ -1,0 +1,28 @@
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-image: url("/images/auth-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-page__title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: clamp(16px, 1.8vw, 22px);
+  letter-spacing: 1px;
+}
+
+.auth-page__form-container {
+  max-width: 700px;
+  width: 100%;
+}
+
+

@@ -1,0 +1,19 @@
+@if (user != undefined) {
+  <app-section-glass>
+    <section class="background-management">
+      <h1 class="background-management__title">Background management</h1>
+      <ul class="background-management__background-list">
+        @for (background of backgrounds; track background.id) {
+          <li class="background-management__background-item"
+              [class.active]="background.value == currentBackground">
+            <button class="background-management__btn-background"
+                    (click)="onBackgroundChange(background.value)">
+              <img alt="background"
+                   src="./backgrounds/{{background.value}}">
+            </button>
+          </li>
+        }
+      </ul>
+    </section>
+  </app-section-glass>
+}

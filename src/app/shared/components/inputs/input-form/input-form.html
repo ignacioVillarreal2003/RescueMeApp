@@ -1,0 +1,15 @@
+<div class="input-form">
+  @if (label) {
+    <label [for]="id">{{ label }}</label>
+  }
+  <input [id]="id"
+         [type]="type"
+         [placeholder]="placeholder"
+         [value]="value"
+         [disabled]="disabled"
+         (input)="updateValue($event)"
+         (blur)="onTouched()">
+  @if (isActive && error) {
+    <span>{{ error }}</span>
+  }
+</div>

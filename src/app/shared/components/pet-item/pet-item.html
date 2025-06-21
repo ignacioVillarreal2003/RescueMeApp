@@ -1,0 +1,16 @@
+@if (pet) {
+  <button class="pet-item"
+          (click)="open()">
+    <div class="pet-item__cover">
+      @if (pet.petPhotos.length > 0) {
+        <img [ngSrc]="pet.petPhotos[0].url" alt="Pet image" fill>
+      }
+      @else {
+        <div class="pet-item__placeholder-image">
+          <mat-icon class="material-symbols-rounded filled">image</mat-icon>
+        </div>
+      }
+    </div>
+    <h1 class="pet-item__name">{{pet.name}}</h1>
+  </button>
+}

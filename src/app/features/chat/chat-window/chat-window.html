@@ -1,0 +1,23 @@
+<section class="chat-window">
+  <div class="chat-window__container" *ngIf="petition && me">
+    <header class="chat-window__header">
+      <h1 class="chat-window__title" *ngIf="me == petition.requestingUser.id">{{ petition.requestedPet.ownerUser.firstName }} {{ petition.requestedPet.ownerUser.lastName }}</h1>
+      <h1 class="chat-window__title" *ngIf="me == petition.requestedPet.ownerUser.id">{{ petition.requestingUser.firstName }} {{ petition.requestingUser.lastName }}</h1>
+      <button class="chat-window__btn-options" (click)="toggleChatOptions()">
+        <img src="./icons/more_vert_48dp_000000_FILL0_wght300_GRAD200_opsz48.svg">
+      </button>
+    </header>
+    <section class="message-list-wrapper">
+      <app-message-list [me]="me"></app-message-list>
+    </section>
+    <app-send-message-form [petition]="petition" [me]="me"></app-send-message-form>
+    <app-chat-options (onClose)="toggleChatOptions()"
+                      *ngIf="isChatOptionsOpen"
+                      [petition]="petition"
+                      [me]="me"></app-chat-options>
+  </div>
+  <div class="chat-window__chat-not-open" *ngIf="!petition">
+    <h1 class="chat-window__chat-not-open-title">No chat selected</h1>
+  </div>
+</section>
+

@@ -1,0 +1,59 @@
+@if (options && options.length > 0 && title) {
+  <div class="filter">
+    <button class="filter__btn-open"
+            (click)="toggleActive()">
+      <h1 class="filter__title">{{ title }}</h1>
+      @if (isActive) {
+        <mat-icon class="material-symbols-rounded filled">arrow_drop_up</mat-icon>
+      }
+      @else {
+        <mat-icon class="material-symbols-rounded filled">arrow_drop_down</mat-icon>
+      }
+    </button>
+
+    @if (isActive) {
+      <ul class="filter__option-list">
+        @for (value of values; track value) {
+          <li class="filter__option-item"
+              (click)="toggleOption(value)">
+            <label class="ios-checkbox">
+              <input type="checkbox"
+                     [checked]="value.isSelected"
+                     (change)="toggleOption(value)"/>
+              <div class="checkbox-wrapper">
+                <div class="checkbox-bg"></div>
+                <svg fill="none" viewBox="0 0 24 24" class="checkbox-icon">
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="3"
+                    stroke="currentColor"
+                    d="M4 12L10 18L20 6"
+                    class="check-path"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <p class="filter__option-text">{{ value.option }}</p>
+          </li>
+        }
+      </ul>
+    }
+    <ul class="filter__preview-list">
+      @for (option of selectedOptions; track option) {
+        <li class="filter__preview-item"
+            (click)="deselectOption(option)">
+          <p class="filter__preview-option">{{ option }}</p>
+          <mat-icon class="material-symbols-rounded filled">close</mat-icon>
+        </li>
+      }
+      @if (selectedOptions.length > 0) {
+        <li>
+          <button class="filter__btn-remove-all" (click)="clean()">
+            <mat-icon class="material-symbols-rounded filled">remove</mat-icon>
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+}

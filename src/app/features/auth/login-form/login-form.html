@@ -1,0 +1,27 @@
+<form [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="login-form">
+  <header class="login-form__header">
+    <h1 class="login-form__title">Welcome back</h1>
+  </header>
+  <section class="login-form__inputs-container">
+    <app-input-form [placeholder]="'Email'"
+                    [label]="'Email'"
+                    formControlName="email"
+                    [error]="getErrorMessage('email')"></app-input-form>
+    <app-input-form [placeholder]="'Password'"
+                    [label]="'Password'"
+                    [type]="'password'"
+                    formControlName="password"
+                    [error]="getErrorMessage('password')"></app-input-form>
+    <app-text-btn [text]="'Login'"
+                  [buttonType]="'submit'"
+                  [disabled]="form.invalid || loaderService.loading()"
+                  style="width: 100%"></app-text-btn>
+  </section>
+  <span class="login-form__line"></span>
+  <footer class="login-form__footer">
+    <a routerLink="/auth/register"
+       class="login-form__link">Sign up</a>
+  </footer>
+</form>

@@ -1,0 +1,26 @@
+@if (user != undefined) {
+  <app-section-glass>
+    <div class="personal-data-management">
+      <h1 class="personal-data-management__title">Personal data management</h1>
+      <form class="personal-data-management__form"
+            [formGroup]="form">
+        <app-input-form [placeholder]="'First name'"
+                        [label]="'First name'"
+                        formControlName="firstName"
+                        [error]="getErrorMessage('firstName')"></app-input-form>
+        <app-input-form [placeholder]="'Last name'"
+                        [label]="'Last name'"
+                        formControlName="lastName"
+                        [error]="getErrorMessage('lastName')"></app-input-form>
+        <app-input-form [placeholder]="'Address'"
+                        [label]="'Address'"
+                        formControlName="address"
+                        [error]="getErrorMessage('address')"></app-input-form>
+        <app-input-form [placeholder]="'Phone'"
+                        [label]="'Phone'"
+                        formControlName="phone"
+                        [error]="getErrorMessage('phone')"></app-input-form>
+      </form>
+    </div>
+  </app-section-glass>
+}

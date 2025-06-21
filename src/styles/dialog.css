@@ -1,0 +1,8 @@
+.mat-mdc-snackbar-surface {
+  box-shadow: none !important;
+}
+
+.cdk-overlay-backdrop {
+  background: var(--bg-layer-1);
+  backdrop-filter: var(--effect-blur-md);
+}

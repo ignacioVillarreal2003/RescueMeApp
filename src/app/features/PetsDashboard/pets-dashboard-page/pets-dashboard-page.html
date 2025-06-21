@@ -1,0 +1,11 @@
+<app-section-glass>
+  <div class="pets-dashboard-page">
+    <header class="pets-dashboard-page__header">
+      <h1 class="pets-dashboard-page__title">Adopt a Friend</h1>
+      <app-icon-btn [icon]="'filter_list'"
+                    (click)="openModal()"></app-icon-btn>
+    </header>
+    <app-pet-list [pets]="pets" [path]="'/main/pet-public-view/'"></app-pet-list>
+    <app-paginator [totalPages]="totalPages"></app-paginator>
+  </div>
+</app-section-glass>

@@ -1,0 +1,44 @@
+.icon-btn {
+  border: none;
+  border-radius: var(--radius-circle);
+  transition: transform var(--transition-fast) ease;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.icon-btn:active {
+  transform: scale(0.9);
+}
+
+.icon-btn mat-icon {
+  --size: 40px;
+  font-size: var(--size);
+  width: var(--size);
+  height: var(--size);
+}
+
+@media (max-width: 800px) {
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .icon-btn mat-icon {
+    --size: 30px;
+  }
+}
+
+.transparent {
+  background-color: var(--bg-layer-1);
+}
+
+.red {
+  background-color: var(--red);
+}

@@ -1,0 +1,47 @@
+.input-files {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-files__file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-layer-4);
+  border-radius: var(--radius-md);
+}
+
+.input-files__file-icon {
+  height: 60px;
+  width: 60px;
+  fill: var(--color-text-primary);
+}
+
+.input-files__input-image-text {
+  font-weight: 400;
+  color: var(--color-text-primary);
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+.input-files__image-input {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .input-files__file-upload {
+    height: 150px;
+    width: 200px;
+  }
+
+  .input-files__file-icon {
+    height: 42px;
+    width: 42px;
+  }
+}

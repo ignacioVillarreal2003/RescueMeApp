@@ -1,0 +1,15 @@
+.pets-dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.pets-dashboard-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pets-dashboard-page__title {
+  font-size: var(--fs-h3);
+}

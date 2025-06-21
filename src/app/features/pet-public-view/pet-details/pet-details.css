@@ -1,0 +1,32 @@
+.pet-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.pet-header__title {
+  font-size: var(--fs-h1);
+  letter-spacing: 2px;
+}
+
+.pet-details__data {
+  border-collapse: collapse;
+}
+
+.pet-details__data td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  font-size: var(--fs-body);
+  border-bottom: 1px solid var(--separator-color);
+}
+
+.pet-details__data tr:last-child td {
+  border-bottom: none;
+}
+
+.pet-details__description {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-body);
+  background-color: var(--bg-layer-3);
+}

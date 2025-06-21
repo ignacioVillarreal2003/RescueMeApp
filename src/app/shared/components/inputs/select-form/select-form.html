@@ -1,0 +1,16 @@
+<div class="select-form">
+  @if (label) {
+    <label [for]="id">{{ label }}</label>
+  }
+  <select [id]="id"
+          [disabled]="disabled"
+          (change)="updateValue($event)"
+          (blur)="onTouched()">
+    @for (option of options; track $index) {
+      <option [value]="option"
+              [selected]="option == value">
+        {{ option }}
+      </option>
+    }
+  </select>
+</div>

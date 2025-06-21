@@ -1,0 +1,50 @@
+@if (pet != undefined) {
+  <section class="pet-details">
+    <h1 class="pet-header__title">{{ pet.name }}</h1>
+    <table class="pet-details__data">
+      <tbody>
+      <tr>
+        <td><strong>Breed</strong></td>
+        <td>{{ pet.breed }}</td>
+      </tr>
+      <tr>
+        <td><strong>Age</strong></td>
+        <td>{{ pet.age }}</td>
+      </tr>
+      <tr>
+        <td><strong>Sex</strong></td>
+        <td>{{ pet.sex }}</td>
+      </tr>
+      <tr>
+        <td><strong>Size</strong></td>
+        <td>{{ pet.size }}</td>
+      </tr>
+      <tr>
+        <td><strong>State</strong></td>
+        <td>{{ pet.state }}</td>
+      </tr>
+      <tr>
+        <td><strong>Color</strong></td>
+        <td>{{ pet.color.toString().toLocaleUpperCase() }}</td>
+      </tr>
+      <tr>
+        <td><strong>Dewormed</strong></td>
+        <td>{{ pet.dewormed.toString().toLocaleUpperCase() }}</td>
+      </tr>
+      <tr>
+        <td><strong>Vaccinated</strong></td>
+        <td>{{ pet.vaccinated.toString().toLocaleUpperCase() }}</td>
+      </tr>
+      <tr>
+        <td><strong>Castrated</strong></td>
+        <td>{{ pet.castrated.toString().toLocaleUpperCase() }}</td>
+      </tr>
+      <tr>
+        <td><strong>Medical notes</strong></td>
+        <td>{{ pet.medicalNotes }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <p class="pet-details__description">{{ pet.description }}</p>
+  </section>
+}

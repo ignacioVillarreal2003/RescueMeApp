@@ -1,0 +1,19 @@
+@if (ownerUser != undefined) {
+  <app-section-glass [type]="'type-2'">
+    <section class="owner-info">
+      <h1 class="owner-info__name">{{ ownerUser.firstName }} {{ ownerUser.lastName}} </h1>
+      <div class="owner-info__data">
+        <mat-icon class="material-symbols-rounded filled">call</mat-icon>
+        <p>{{ ownerUser.phone }}</p>
+      </div>
+      <div class="owner-info__data">
+        <mat-icon class="material-symbols-rounded filled">mail</mat-icon>
+        <p>{{ ownerUser.email }}</p>
+      </div>
+      <div class="owner-info__data">
+        <mat-icon class="material-symbols-rounded filled">location_on</mat-icon>
+        <p>{{ ownerUser.address }}</p>
+      </div>
+    </section>
+  </app-section-glass>
+}

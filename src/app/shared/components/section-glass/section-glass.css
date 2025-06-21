@@ -1,0 +1,36 @@
+.section-glass {
+  transition: all var(--transition-medium) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.03"/></svg>');
+  pointer-events: none;
+  z-index: 0;
+}
+
+.type-1 {
+  border: var(--border-strong);
+  background: var(--bg-layer-1);
+  box-shadow: var(--shadow-level-1);
+  backdrop-filter: var(--effect-blur-sm) var(--effect-saturation-sm);
+}
+
+.type-2 {
+  border: var(--border-light);
+  background: var(--bg-layer-2);
+  box-shadow: var(--shadow-level-2);
+  backdrop-filter: var(--effect-blur-md) var(--effect-saturation-md);
+}
+
+.type-3 {
+  border: var(--border-strong);
+  background: var(--bg-layer-4);
+  backdrop-filter: var(--effect-blur-xl) var(--effect-saturation-md);
+}
+
+

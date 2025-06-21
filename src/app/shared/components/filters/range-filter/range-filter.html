@@ -1,0 +1,12 @@
+@if (title && minValue != undefined && maxValue != undefined) {
+  <div class="filter-range">
+    <h1 class="filter-range__title">{{ title }}</h1>
+    <input type="range"
+           [min]=minValue
+           [max]=maxValue
+           [value]=value
+           class="filter-range__input"
+           (change)="changeValue($event)">
+    <p class="filter-range__preview">{{value}} years</p>
+  </div>
+}

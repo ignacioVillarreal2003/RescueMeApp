@@ -1,0 +1,34 @@
+<app-modal [title]="'Create a publication'"
+           (onClose)="close()">
+  <form class="create-pet-modal"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()">
+    <app-input-files-form [multiple]="true"
+                          (onFilesSelected)="onFilesSelected($event)"></app-input-files-form>
+    <app-input-form [placeholder]="'Name'"
+                    [label]="'Name'"
+                    formControlName="name"
+                    [error]="getErrorMessage('name')"></app-input-form>
+    <app-textarea-form [placeholder]="'Description'"
+                       [label]="'Description'"
+                       formControlName="description"
+                       [error]="getErrorMessage('description')"></app-textarea-form>
+    <app-input-form [placeholder]="'Age'"
+                    [label]="'Age'"
+                    [type]="'number'"
+                    formControlName="age"
+                    [error]="getErrorMessage('age')"></app-input-form>
+    <app-select-form [label]="'Species'"
+                     formControlName="species"
+                     [options]="speciesValues"></app-select-form>
+    <app-select-form [label]="'Size'"
+                     formControlName="size"
+                     [options]="sizeValues"></app-select-form>
+    <app-select-form [label]="'Sex'"
+                     formControlName="sex"
+                     [options]="sexValues"></app-select-form>
+    <app-text-btn [text]="'Submit'"
+                  [disabled]="form.invalid || loaderService.loading()"
+                  [buttonType]="'submit'"></app-text-btn>
+  </form>
+</app-modal>

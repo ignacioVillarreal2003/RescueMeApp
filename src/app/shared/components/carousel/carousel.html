@@ -1,0 +1,35 @@
+@if (images != undefined && images.length > 0) {
+  <div class="carousel">
+    <div class="carousel__container">
+      <div class="carousel__content">
+        <ul class="carousel__preview-list">
+          @for (image of images; track $index) {
+            <li class="carousel__preview-item"
+                [class.active]="currentIndex == $index">
+              <img alt="pet image" [ngSrc]="image" fill>
+            </li>
+          }
+        </ul>
+        <nav class="carousel__nav">
+          <button class="carousel__btn-option" (click)="prev(true)">
+            <mat-icon class="material-symbols-rounded filled">arrow_left</mat-icon>
+          </button>
+          <button class="carousel__btn-option" (click)="next(true)">
+            <mat-icon class="material-symbols-rounded filled">arrow_right</mat-icon>
+          </button>
+        </nav>
+      </div>
+      <ul class="carousel__thumbnail">
+        @for (image of images; track $index) {
+          <li class="carousel__thumbnail-item">
+            <button class="carousel__btn-thumbnail"
+                    (click)="selectImage($index)"
+                    [class.active]="currentIndex == $index">
+              <img alt="pet image" [ngSrc]="image" fill>
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+}

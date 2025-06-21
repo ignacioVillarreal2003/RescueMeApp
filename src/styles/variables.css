@@ -49,12 +49,13 @@
   --z-toast: 2000;
   --z-tooltip: 3000;
 
-  /* — Icon — */
-  --icon-size-xs: 16px;
-  --icon-size-sm: 20px;
-  --icon-size-md: 24px;
-  --icon-size-lg: 32px;
-  --icon-size-xl: 48px;
+  /* — Titles — */
+  --fs-h1: clamp(26px, 3vw, 34px);
+  --fs-h2: clamp(22px, 2.4vw, 30px);
+  --fs-h3: clamp(18px, 2vw, 26px);
+  --fs-subtitle: clamp(17px, 1.8vw, 22px);
+  --fs-body: clamp(14px, 1.4vw, 16px);
+  --fs-small: clamp(12px, 1.1vw, 14px);
 }
 
 :root.light-default {
@@ -86,17 +87,11 @@
   --color-text-disabled: rgba(0, 0, 0, 0.4);
   --color-text-translucent: rgba(0, 0, 0, 0.6);
 
-  /* — Glass backgrounds — */
-  --glass-bg-1: rgba(255, 255, 255, 0.15);
-  --glass-bg-2: rgba(255, 255, 255, 0.25);
-  --glass-bg-3: rgba(255, 255, 255, 0.35);
-  --glass-bg-4: rgba(255, 255, 255, 0.5);
-  --glass-bg-gradient:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.15)
-    );
+  /* — Layered Backgrounds — */
+  --bg-layer-1: rgba(255, 255, 255, 0.15);
+  --bg-layer-2: rgba(255, 255, 255, 0.25);
+  --bg-layer-3: rgba(255, 255, 255, 0.35);
+  --bg-layer-4: rgba(255, 255, 255, 0.5);
 
   /* — Borders — */
   --border-light: 1px solid rgba(0, 0, 0, 0.1);
@@ -140,17 +135,11 @@
   --color-text-disabled: rgba(255, 255, 255, 0.4);
   --color-text-translucent: rgba(255, 255, 255, 0.6);
 
-  /* — Glass backgrounds — */
-  --glass-bg-1: rgba(0, 0, 0, 0.15);
-  --glass-bg-2: rgba(0, 0, 0, 0.25);
-  --glass-bg-3: rgba(0, 0, 0, 0.35);
-  --glass-bg-4: rgba(0, 0, 0, 0.5);
-  --glass-bg-gradient:
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.10)
-    );
+  /* — Layered Backgrounds — */
+  --bg-layer-1: rgba(0, 0, 0, 0.15);
+  --bg-layer-2: rgba(0, 0, 0, 0.25);
+  --bg-layer-3: rgba(0, 0, 0, 0.35);
+  --bg-layer-4: rgba(0, 0, 0, 0.5);
 
   /* — Borders — */
   --border-light: 1px solid rgba(255, 255, 255, 0.2);
@@ -194,17 +183,11 @@
   --color-text-disabled: rgba(0, 0, 0, 0.4);
   --color-text-translucent: rgba(0, 0, 0, 0.6);
 
-  /* — Glass backgrounds — */
-  --glass-bg-1: rgba(255, 255, 255, 0.15);
-  --glass-bg-2: rgba(255, 255, 255, 0.25);
-  --glass-bg-3: rgba(255, 255, 255, 0.35);
-  --glass-bg-4: rgba(255, 255, 255, 0.5);
-  --glass-bg-gradient:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.15)
-    );
+  /* — Layered Backgrounds — */
+  --bg-layer-1: rgba(255, 255, 255, 0.15);
+  --bg-layer-2: rgba(255, 255, 255, 0.25);
+  --bg-layer-3: rgba(255, 255, 255, 0.35);
+  --bg-layer-4: rgba(255, 255, 255, 0.5);
 
   /* — Borders — */
   --border-light: 1px solid rgba(0, 0, 0, 0.1);
@@ -248,17 +231,11 @@
   --color-text-disabled: rgba(255, 255, 255, 0.4);
   --color-text-translucent: rgba(255, 255, 255, 0.6);
 
-  /* — Glass backgrounds — */
-  --glass-bg-1: rgba(0, 0, 0, 0.15);
-  --glass-bg-2: rgba(0, 0, 0, 0.25);
-  --glass-bg-3: rgba(0, 0, 0, 0.35);
-  --glass-bg-4: rgba(0, 0, 0, 0.5);
-  --glass-bg-gradient:
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.10)
-    );
+  /* — Layered Backgrounds — */
+  --bg-layer-1: rgba(0, 0, 0, 0.15);
+  --bg-layer-2: rgba(0, 0, 0, 0.25);
+  --bg-layer-3: rgba(0, 0, 0, 0.35);
+  --bg-layer-4: rgba(0, 0, 0, 0.5);
 
   /* — Borders — */
   --border-light: 1px solid rgba(255, 255, 255, 0.2);

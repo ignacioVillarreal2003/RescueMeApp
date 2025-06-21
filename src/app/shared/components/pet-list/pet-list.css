@@ -1,0 +1,12 @@
+.pet-list__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.pet-list__empty-title {
+  font-size: var(--fs-h1);
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}

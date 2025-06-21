@@ -1,0 +1,16 @@
+export const BackgroundValues = [
+  { id: 1, value: 'background-1.jpg' },
+  { id: 2, value: 'background-2.jpg' },
+  { id: 3, value: 'background-3.jpg' },
+  { id: 4, value: 'background-4.jpg' },
+  { id: 5, value: 'background-5.jpg' },
+  { id: 6, value: 'background-6.jpg' },
+  { id: 7, value: 'background-7.jpg' },
+  { id: 8, value: 'background-8.jpg' },
+  { id: 9, value: 'background-9.jpg' },
+  { id: 10, value: 'background-10.jpg' },
+  { id: 11, value: 'background-11.jpg' },
+  { id: 12, value: 'background-12.jpg' },
+  { id: 13, value: 'background-13.jpg' },
+  { id: 14, value: 'background-14.jpg' },
+] as const;

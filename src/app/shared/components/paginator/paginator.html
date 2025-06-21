@@ -1,0 +1,31 @@
+@if (totalPages) {
+  <div class="paginator">
+    <div class="paginator__container">
+      <button class="paginator__btn-option"
+              (click)="goToFirstPage()">
+        <mat-icon class="material-symbols-rounded filled">keyboard_double_arrow_left</mat-icon>
+      </button>
+      <button class="paginator__btn-option hidden-option"
+              (click)="goToPreviousPage()">
+        <mat-icon class="material-symbols-rounded filled">chevron_left</mat-icon>
+      </button>
+      <ul class="paginator_list">
+        @for (page of getPages(); track page) {
+          <li class="paginator_item"
+              [class.active]="page == currentPage">
+            <button class="paginator_btn-page"
+                    (click)="setPage(page)">{{ page }}</button>
+          </li>
+        }
+      </ul>
+      <button class="paginator__btn-option hidden-option"
+              (click)="goToNextPage()">
+        <mat-icon class="material-symbols-rounded filled">chevron_right</mat-icon>
+      </button>
+      <button class="paginator__btn-option"
+              (click)="goToLastPage()">
+        <mat-icon class="material-symbols-rounded filled">keyboard_double_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+}

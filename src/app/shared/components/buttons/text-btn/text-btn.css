@@ -1,0 +1,41 @@
+.text-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  color: white;
+  transition: all var(--transition-fast) ease;
+  user-select: none;
+  object-position: center;
+  will-change: transform;
+}
+
+.text-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+}
+
+.text-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.text-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: var(--blue);
+}
+
+.secondary {
+  background-color: var(--gray-1);
+}
+
+.danger {
+  background-color: var(--red);
+}

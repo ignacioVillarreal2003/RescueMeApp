@@ -1,0 +1,42 @@
+.pet-management-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.pet-management-page__nav-bar {
+  display: flex;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.pet-management-page__nav-bar a {
+  width: 100%;
+  text-align: center;
+  background-color: #191818;
+  color: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: clamp(14px, 1.6vw, 20px);
+  transition: all var(--transition-fast) ease;
+}
+
+.pet-management-page__nav-bar a:hover {
+  transform: scale(1.02);
+}
+
+.pet-management-page__nav-bar a:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 800px) {
+  .pet-management-page__nav-bar {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .pet-management-page__nav-bar a {
+    padding: var(--spacing-sm);
+  }
+}

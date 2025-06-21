@@ -1,0 +1,27 @@
+@if (pet != undefined) {
+  <app-section-glass>
+    <section class="pet-images-manager">
+      <h1 class="pet-images-manager__title">Pet images manager</h1>
+      @if (pet.petPhotos.length > 0) {
+        <app-carousel #carousel
+                      [images]="images"
+                      [isAnimated]="false"></app-carousel>
+        <div class="pet-images-manager__remove-image">
+          <app-icon-btn [icon]="'remove'"
+                        [background]="'red'"
+                        (click)="delete()"
+                        [rounded]="'--radius-circle'"></app-icon-btn>
+        </div>
+      }
+      <form class="pet-images-manager__form"
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+        <app-input-files-form (onFilesSelected)="onFilesSelected($event)"
+                              [multiple]="true"></app-input-files-form>
+        <app-text-btn [text]="'Submit'"
+                      [buttonType]="'submit'"
+                      [color]="'primary'"></app-text-btn>
+      </form>
+    </section>
+  </app-section-glass>
+}

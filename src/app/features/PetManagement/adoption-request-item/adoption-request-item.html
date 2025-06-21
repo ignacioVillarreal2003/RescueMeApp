@@ -1,0 +1,26 @@
+@if (petition != undefined) {
+  <app-section-glass [type]="'type-2'">
+    <div class="adoption-request-item">
+      <header class="adoption-request-item__header">
+        <h1 class="adoption-request-item__title">{{ petition.requestingUser.firstName }} {{ petition.requestingUser.lastName }}</h1>
+        <app-icon-btn [icon]="'man'"
+                      (click)="goToProfile()"></app-icon-btn>
+      </header>
+
+      <h2 class="adoption-request-item__message">{{ petition.message }}</h2>
+
+      <div class="adoption-request-item__status">
+        <h3 class="adoption-request-item__status-text" [ngClass]="statusClass(petition.status)">{{ statusClass(petition.status) }}</h3>
+      </div>
+
+      <footer class="adoption-request-item__footer">
+        <button class="adoption-request-item__btn-accept" (click)="accept()">
+          <mat-icon class="material-symbols-rounded filled">check</mat-icon>
+        </button>
+        <button class="adoption-request-item__btn-reject" (click)="reject()">
+          <mat-icon class="material-symbols-rounded filled">close</mat-icon>
+        </button>
+      </footer>
+    </div>
+  </app-section-glass>
+}

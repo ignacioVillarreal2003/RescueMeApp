@@ -1,0 +1,15 @@
+<div class="textarea-form">
+  @if (label) {
+    <label [for]="id">{{ label }}</label>
+  }
+  <textarea [id]="id"
+            [placeholder]="placeholder"
+            [value]="value"
+            [disabled]="disabled"
+            (input)="updateValue($event)"
+            (blur)="onTouched()">
+  </textarea>
+  @if (isActive && error) {
+    <span>{{ error }}</span>
+  }
+</div>

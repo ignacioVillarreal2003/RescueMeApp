@@ -1,0 +1,29 @@
+@if (user != undefined) {
+  <app-section-glass>
+    <div class="public-profile-page">
+      <header class="public-profile-page__header">
+        <h2 class="public-profile-page__sub-title">Public profile</h2>
+        <div class="public-profile-page__profile">
+          <img src="./avatars/avatar-{{ indexAvatar }}.png">
+          <h1 class="public-profile-page__title">{{ user.firstName }} {{ user.lastName }}</h1>
+        </div>
+      </header>
+      <table class="public-profile-page__table">
+        <tbody>
+        <tr>
+          <td>Email</td>
+          <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>{{ user.address }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-section-glass>
+}

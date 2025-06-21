@@ -1,0 +1,7 @@
+<ul class="chat-list">
+  <li class="chat-list__item" *ngFor="let petition of petitions">
+    <app-chat-item [petition]="petition"
+                   [activeChatId]="activeChatId"
+                   [me]="me"></app-chat-item>
+  </li>
+</ul>

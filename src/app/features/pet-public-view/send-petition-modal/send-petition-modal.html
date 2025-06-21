@@ -1,0 +1,15 @@
+<app-modal [title]="'Petition'"
+           (onClose)="close()">
+  <form class="send-petition-modal"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()">
+    <app-textarea-form [placeholder]="'Message'"
+                  formControlName="message"
+                  [label]="'Message'"
+                  [error]="getErrorMessage('message')"></app-textarea-form>
+    <app-text-btn [text]="'Submit'"
+                  [buttonType]="'submit'"
+                  [disabled]="form.invalid || loaderService.loading()"
+                  style="width: 100%"></app-text-btn>
+  </form>
+</app-modal>

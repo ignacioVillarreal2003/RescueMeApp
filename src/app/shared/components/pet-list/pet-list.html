@@ -1,0 +1,13 @@
+<section class="pet-list">
+  @if (pets.length > 0) {
+    <ul class="pet-list__list">
+      @for (pet of pets; track pet.id) {
+        <li class="pet-list__item">
+          <app-pet-item [pet]="pet" [path]="path"></app-pet-item>
+        </li>
+      }
+    </ul>
+  } @else {
+    <h1 class="pet-list__empty-title">There are not pets...</h1>
+  }
+</section>

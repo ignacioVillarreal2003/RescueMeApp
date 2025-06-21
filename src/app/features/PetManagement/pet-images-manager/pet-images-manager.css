@@ -1,0 +1,23 @@
+.pet-images-manager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: 10px 0;
+}
+
+.pet-images-manager__title {
+  font-size: var(--fs-h3);
+}
+
+.pet-images-manager__remove-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pet-images-manager__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}

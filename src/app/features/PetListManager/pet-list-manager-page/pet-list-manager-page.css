@@ -1,0 +1,6 @@
+.pet-list-manager-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: 10px 0;
+}
