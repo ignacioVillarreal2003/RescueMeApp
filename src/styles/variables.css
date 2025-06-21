@@ -1,0 +1,274 @@
+:root {
+  /* — Effects — */
+  --effect-blur-xs: blur(4px);
+  --effect-blur-sm: blur(8px);
+  --effect-blur-md: blur(16px);
+  --effect-blur-lg: blur(24px);
+  --effect-blur-xl: blur(32px);
+  --effect-saturation-sm: saturate(1.1);
+  --effect-saturation-md: saturate(1.2);
+
+  /* — Spacing (Gap & Margin) — */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* — Padding — */
+  --padding-xs: var(--spacing-xs);
+  --padding-sm: var(--spacing-sm);
+  --padding-md: var(--spacing-md);
+  --padding-lg: var(--spacing-lg);
+  --padding-xl: var(--spacing-xl);
+
+  /* — Border Radius — */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-circle: 50%;
+  --radius-pill: 9999px;
+
+  /* — Elevation / Shadows — */
+  --shadow-level-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-level-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-level-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  /* — Transition Durations — */
+  --transition-fast: 150ms;
+  --transition-medium: 300ms;
+  --transition-slow: 500ms;
+
+  /* — Z-Index Layers — */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-modal: 1000;
+  --z-toast: 2000;
+  --z-tooltip: 3000;
+
+  /* — Icon — */
+  --icon-size-xs: 16px;
+  --icon-size-sm: 20px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 32px;
+  --icon-size-xl: 48px;
+}
+
+:root.light-default {
+  /* — Core Colors — */
+  --red: #ff383c;
+  --orange: #ff8d28;
+  --yellow: #ffcc00;
+  --green: #34c759;
+  --mint: #00c8b3;
+  --teal: #00c3d0;
+  --cyan: #00c0e8;
+  --blue: #0088ff;
+  --indigo: #6155f5;
+  --purple: #cb30f2;
+  --pink: #ff2d55;
+  --brown: #ac7f5e;
+
+  /* — Gray Scale — */
+  --gray-1: rgb(142, 142, 147);
+  --gray-2: rgb(174, 174, 178);
+  --gray-3: rgb(199, 199, 204);
+  --gray-4: rgb(209, 209, 214);
+  --gray-5: rgb(229, 229, 234);
+  --gray-6: rgb(242, 242, 247);
+
+  /* — Typography — */
+  --color-text-primary: #000000;
+  --color-text-secondary: rgba(0, 0, 0, 0.75);
+  --color-text-disabled: rgba(0, 0, 0, 0.4);
+  --color-text-translucent: rgba(0, 0, 0, 0.6);
+
+  /* — Glass backgrounds — */
+  --glass-bg-1: rgba(255, 255, 255, 0.15);
+  --glass-bg-2: rgba(255, 255, 255, 0.25);
+  --glass-bg-3: rgba(255, 255, 255, 0.35);
+  --glass-bg-4: rgba(255, 255, 255, 0.5);
+  --glass-bg-gradient:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.15)
+    );
+
+  /* — Borders — */
+  --border-light: 1px solid rgba(0, 0, 0, 0.1);
+  --border-strong: 1px solid rgba(0, 0, 0, 0.2);
+
+  /* — Shadows for layering — */
+  --shadow-level-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-level-2: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-level-3: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  /* — Separator line color — */
+  --separator-color: rgba(0, 0, 0, 0.1);
+}
+
+:root.dark-default {
+  /* — Core Colors — */
+  --red: #ff4245;
+  --orange: #ff9230;
+  --yellow: #ffd600;
+  --green: #30d158;
+  --mint: #00dac3;
+  --teal: #00d2e0;
+  --cyan: #3cd3fe;
+  --blue: #0091ff;
+  --indigo: #6b5dff;
+  --purple: #db34f2;
+  --pink: #ff375f;
+  --brown: #b78a66;
+
+  /* — Gray Scale (dark) — */
+  --gray-1: rgb(142, 142, 147);
+  --gray-2: rgb(99, 99, 102);
+  --gray-3: rgb(72, 72, 74);
+  --gray-4: rgb(58, 58, 60);
+  --gray-5: rgb(44, 44, 46);
+  --gray-6: rgb(28, 28, 30);
+
+  /* — Typography — */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  --color-text-disabled: rgba(255, 255, 255, 0.4);
+  --color-text-translucent: rgba(255, 255, 255, 0.6);
+
+  /* — Glass backgrounds — */
+  --glass-bg-1: rgba(0, 0, 0, 0.15);
+  --glass-bg-2: rgba(0, 0, 0, 0.25);
+  --glass-bg-3: rgba(0, 0, 0, 0.35);
+  --glass-bg-4: rgba(0, 0, 0, 0.5);
+  --glass-bg-gradient:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.10)
+    );
+
+  /* — Borders — */
+  --border-light: 1px solid rgba(255, 255, 255, 0.2);
+  --border-strong: 2px solid rgba(255, 255, 255, 0.4);
+
+  /* — Shadows for layering — */
+  --shadow-level-1: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-level-2: 0 4px 8px rgba(0, 0, 0, 0.6);
+  --shadow-level-3: 0 8px 16px rgba(0, 0, 0, 0.7);
+
+  /* — Separator line color — */
+  --separator-color: rgba(255, 255, 255, 0.2);
+}
+
+:root.light-increased-contrast {
+  /* — Core Colors — */
+  --red: #e9152d;
+  --orange: #c55300;
+  --yellow: #a16a00;
+  --green: #008932;
+  --mint: #008575;
+  --teal: #008198;
+  --cyan: #007eae;
+  --blue: #1e6ef4;
+  --indigo: #564ade;
+  --purple: #b02fc2;
+  --pink: #e7124d;
+  --brown: #956d51;
+
+  /* — Gray Scale (contrast light) — */
+  --gray-1: rgb(108, 108, 112);
+  --gray-2: rgb(142, 142, 147);
+  --gray-3: rgb(174, 174, 178);
+  --gray-4: rgb(188, 188, 192);
+  --gray-5: rgb(216, 216, 220);
+  --gray-6: rgb(235, 235, 240);
+
+  /* — Typography — */
+  --color-text-primary: #000000;
+  --color-text-secondary: rgba(0, 0, 0, 0.75);
+  --color-text-disabled: rgba(0, 0, 0, 0.4);
+  --color-text-translucent: rgba(0, 0, 0, 0.6);
+
+  /* — Glass backgrounds — */
+  --glass-bg-1: rgba(255, 255, 255, 0.15);
+  --glass-bg-2: rgba(255, 255, 255, 0.25);
+  --glass-bg-3: rgba(255, 255, 255, 0.35);
+  --glass-bg-4: rgba(255, 255, 255, 0.5);
+  --glass-bg-gradient:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.15)
+    );
+
+  /* — Borders — */
+  --border-light: 1px solid rgba(0, 0, 0, 0.1);
+  --border-strong: 1px solid rgba(0, 0, 0, 0.2);
+
+  /* — Shadows for layering — */
+  --shadow-level-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-level-2: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-level-3: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  /* — Separator line color — */
+  --separator-color: rgba(0, 0, 0, 0.1);
+}
+
+:root.dark-increased-contrast {
+  /* — Core Colors — */
+  --red: #ff6165;
+  --orange: #ffa056;
+  --yellow: #fedf43;
+  --green: #4ad968;
+  --mint: #54dfcb;
+  --teal: #3bddec;
+  --cyan: #6dd9ff;
+  --blue: #5cb8ff;
+  --indigo: #a7aaff;
+  --purple: #ea8dff;
+  --pink: #ff8ac4;
+  --brown: #dba679;
+
+  /* — Gray Scale (contrast dark) — */
+  --gray-1: rgb(174, 174, 178);
+  --gray-2: rgb(124, 124, 128);
+  --gray-3: rgb(84, 84, 86);
+  --gray-4: rgb(68, 68, 70);
+  --gray-5: rgb(54, 54, 56);
+  --gray-6: rgb(36, 36, 38);
+
+  /* — Typography — */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  --color-text-disabled: rgba(255, 255, 255, 0.4);
+  --color-text-translucent: rgba(255, 255, 255, 0.6);
+
+  /* — Glass backgrounds — */
+  --glass-bg-1: rgba(0, 0, 0, 0.15);
+  --glass-bg-2: rgba(0, 0, 0, 0.25);
+  --glass-bg-3: rgba(0, 0, 0, 0.35);
+  --glass-bg-4: rgba(0, 0, 0, 0.5);
+  --glass-bg-gradient:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.10)
+    );
+
+  /* — Borders — */
+  --border-light: 1px solid rgba(255, 255, 255, 0.2);
+  --border-strong: 2px solid rgba(255, 255, 255, 0.4);
+
+  /* — Shadows for layering — */
+  --shadow-level-1: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-level-2: 0 4px 8px rgba(0, 0, 0, 0.6);
+  --shadow-level-3: 0 8px 16px rgba(0, 0, 0, 0.7);
+
+  /* — Separator line color — */
+  --separator-color: rgba(255, 255, 255, 0.2);
+}
