@@ -10,14 +10,14 @@
   z-index: -1;
   width: 100%;
   height: 100vh;
-  background-image: url("/backgrounds/background-7.jpg");
+  background-image: url("/backgrounds/apple-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .main-page__content-container {
-  padding: var(--padding-xl);
+  padding: var(--padding-md);
 }
 
 @media (max-width: 800px) {

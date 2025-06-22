@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import {Petition} from '../../../core/models/petition';
 import {ActivatedRoute} from '@angular/router';
-import {MessageHttpService} from '../../../core/services/http/message-http.service';
 import {SessionService} from '../../../core/services/session/session.service';
 import {ChatsSidebar} from '../chats-sidebar/chats-sidebar';
 import {ChatWindow} from '../chat-window/chat-window';
+import {User} from '../../../core/models/user';
 
 @Component({
   selector: 'app-chat-page',
@@ -17,24 +16,16 @@ import {ChatWindow} from '../chat-window/chat-window';
 })
 export class ChatPage {
   chatId: number | undefined;
-  userId: number | undefined;
+  user: User | undefined;
 
   constructor(private route: ActivatedRoute,
-              private messageHttpService: MessageHttpService,
-              private sessionService: SessionService,
-              /*
-                            private chatService: ChatService,
-              */
-  ) {
+              private sessionService: SessionService) {
   }
 
   ngOnInit(): void {
-    /*this.me = this.sessionService.getData()?.user.id;
+    this.user = this.sessionService.session()?.user;
     this.route.paramMap.subscribe((params: any): void => {
-      const id: number = params.get('id');
-      this.activeChatId = id;
-      this.chatService.connect(id);
-    });*/
+      this.chatId = Number(params.get('id'));
+    });
   }
-
 }

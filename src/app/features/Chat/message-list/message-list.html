@@ -1,5 +1,5 @@
 <ul class="message-list">
-  <li class="message-list__item" *ngFor="let message of messages">
-    <app-message-item [message]="message" [me]="me"></app-message-item>
-  </li>
+  @for (message of messages; track message.id) {
+    <li><app-message-item [message]="message" [user]="user"></app-message-item></li>
+  }
 </ul>

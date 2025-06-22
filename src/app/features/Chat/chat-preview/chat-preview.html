@@ -1,13 +1,5 @@
-@if (chat != undefined && chatId != undefined && userId != undefined) {
-  <button class="chat-preview"
-          id="chat-preview-{{chat.id}}"
-          (click)="openChat()">
-    @if (chat.userId1 == userId) {
-      <span class="chat-preview__full-name">{{chat.username1}}</span>
-    }
-    @if (chat.userId2 == userId) {
-      <span class="chat-preview__full-name">{{chat.username2}}</span>
-    }
-    <span class="chat-preview__initials">{{ getInitials() }}</span>
-  </button>
-}
+<button class="chat-preview"
+        (click)="openChat()">
+  <img class="chat-preview__image" src="./avatars/avatar-1.png" alt="">
+  <span class="chat-preview__title">{{chat?.username1}}</span>
+</button>

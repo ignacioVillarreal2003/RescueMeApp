@@ -3,18 +3,22 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {Petition} from '../../../core/models/petition';
 import {MessageHttpService} from '../../../core/services/http/message-http.service';
 import {AddMessage, Message} from '../../../core/models/message';
+import {Chat} from '../../../core/models/chaat';
+import {User} from '../../../core/models/user';
+import {IconBtn} from '../../../shared/components/buttons/icon-btn/icon-btn';
 
 @Component({
   selector: 'app-message-input',
-    imports: [
-        ReactiveFormsModule
-    ],
+  imports: [
+    ReactiveFormsModule,
+    IconBtn
+  ],
   templateUrl: './message-input.html',
   styleUrl: './message-input.css'
 })
 export class MessageInput {
-  @Input() petition: Petition | undefined = undefined;
-  @Input() me: number | undefined = undefined;
+  @Input() user: User | undefined;
+  @Input() chat: Chat | undefined;
 
   sendMessageForm: FormGroup = new FormGroup({
     content: new FormControl('', [Validators.required, Validators.maxLength(255)])
@@ -28,19 +32,14 @@ export class MessageInput {
       this.sendMessageForm.markAllAsTouched();
       return;
     }
-    if (this.petition != undefined) {
+    if (this.chat != undefined) {
       const body: AddMessage = {
         content: this.sendMessageForm.value.content,
-        relatedPetitionId: this.petition.id,
-        toUserId: this.me == this.petition.requestingUser.id ? this.petition.requestedPet.ownerUser.id : this.petition.requestingUser.id,
+        relatedPetitionId: this.chat.id,
+        toUserId: this.user?.id == this.chat.userId1 ? this.chat.userId1 : this.chat.userId2,
       }
       this.messageHttpService.add(body).subscribe({
-        next: (result: Message): void => {},
-        error: (error: Error): void => {
-          /*
-                    this.alertService.showError('Error adding messages. Please try again later.');
-          */
-        }
+        next: (result: Message): void => {}
       });
     }
   }

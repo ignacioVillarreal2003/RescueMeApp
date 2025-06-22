@@ -1,46 +1,31 @@
 .chat-preview {
   width: 100%;
-  text-align: center;
-  border: none;
-  background-color: rgba(var(--blue), 0.2);
-  color: #1e1e1e;
-  font-size: clamp(12px, 3vw, 16px);
-  padding: 20px;
-  border-left: 10px solid rgba(var(--blue), 0.6);
-  transition: all .15s ease-in-out;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-bottom: var(--border-strong);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast) ease;
+}
+
+.chat-preview:hover {
+  background-color: var(--bg-layer-2);
 }
 
 .chat-preview.active {
-  border-left: 10px solid var(--blue);
-  background: linear-gradient(to right, #bedaff, #ebf5ff);
+  background-color: var(--bg-layer-3);
 }
 
-.chat-preview__full-name {
-  display: inline;
+.chat-preview__image {
+  width: 48px;
+  height: 48px;
 }
 
-.chat-preview__initials {
-  display: none;
+.chat-preview__title {
+  font-size: var(--fs-body);
 }
 
 @media (max-width: 800px) {
-  .chat-preview {
-    padding: 15px 10px;
-    border-left-width: 4px;
-  }
 
-  .chat-preview.active {
-    border-left-width: 4px;
-  }
-
-  .chat-preview__full-name {
-    display: none;
-  }
-
-  .chat-preview__initials {
-    display: inline;
-  }
 }

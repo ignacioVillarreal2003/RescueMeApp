@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Router} from '@angular/router';
 import {Chat} from '../../../core/models/chaat';
+import {User} from '../../../core/models/user';
 
 @Component({
   selector: 'app-chat-preview',
@@ -11,7 +12,7 @@ import {Chat} from '../../../core/models/chaat';
 export class ChatPreview {
   @Input() chat: Chat | undefined;
   @Input() chatId: number | undefined;
-  @Input() userId: number | undefined;
+  @Input() user: User | undefined;
 
   constructor(private router: Router) {
   }
@@ -29,15 +30,6 @@ export class ChatPreview {
         }
       });
     }
-  }
-
-  getInitials(): string {
-    if (this.chat && this.chat.userId1 == this.userId) {
-      return this.chat.username1.charAt(0).toUpperCase();
-    } else if (this.chat && this.chat.userId2 == this.userId) {
-      return this.chat.username2.charAt(0).toUpperCase();
-    }
-    return "";
   }
 
   openChat(): void {

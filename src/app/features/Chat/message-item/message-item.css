@@ -22,12 +22,12 @@
 }
 
 .from-me .message-item__content-wrapper {
-  background-color: var(--color-blue-200);
+  background-color: var(--blue);
   border-bottom-right-radius: 4px;
 }
 
 .to-me .message-item__content-wrapper {
-  background-color: #eee;
+  background-color: var(--bg-layer-2);
   border-bottom-left-radius: 4px;
 }
 

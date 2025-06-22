@@ -28,7 +28,7 @@ export class BackgroundManagement {
 
   ngOnInit(): void {
     if (this.user != undefined) {
-      this.currentBackground = this.user.background ?? 'background-1.jpg';
+      this.currentBackground = this.user.background ?? 'apple-1.jpg';
     }
   }
 

@@ -1,9 +1,12 @@
 <div class="chat-page">
-  <div class="chat-list-wrapper">
-    <app-chats-sidebar [userId]=""
-                       [chatId]=""></app-chats-sidebar>
-  </div>
-  <div class="chat-window-wrapper">
-    <app-chat-window [petition]="getActiveChat()" [me]="me"></app-chat-window>
+  <div class="chat-page__background"></div>
+  <div class="chat-page__container">
+    <div class="chat-page__chats-sidebar-wrapper">
+      <app-chats-sidebar [user]="user"
+                         [chatId]="chatId"></app-chats-sidebar>
+    </div>
+    <div class="chat-page__chat-window-wrapper">
+      <app-chat-window [user]="user"></app-chat-window>
+    </div>
   </div>
 </div>

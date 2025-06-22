@@ -7,7 +7,6 @@ import {PetsDashboardPage} from '../../PetsDashboard/pets-dashboard-page/pets-da
 import {PetDetailsPage} from '../../PetDetails/pet-details-page/pet-details-page';
 import {AdoptionRequestsPage} from '../../AdoptionRequests/adoption-requests-page/adoption-requests-page';
 import {UserPublicProfilePage} from '../../UserPublicProfile/user-public-profile-page/user-public-profile-page';
-import {ChatPage} from '../../Chat/chat-page/chat-page';
 
 const routes: Routes = [
   {
@@ -15,10 +14,6 @@ const routes: Routes = [
     loadComponent: () => import('../main-page/main-page').then(m => m.MainPage),
     children: [
       { path: '', redirectTo: 'pets-dashboard', pathMatch: 'full' },
-      {
-        path: 'chat/:id',
-        component: ChatPage
-      },
       {
         path: 'user-public-profile/:id',
         component: UserPublicProfilePage
