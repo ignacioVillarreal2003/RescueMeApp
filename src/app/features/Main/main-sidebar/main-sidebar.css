@@ -1,0 +1,148 @@
+/* Contenedor principal */
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80px; /* ancho cerrado */
+  background-color: var(--bg-layer-4);
+  backdrop-filter: var(--effect-blur-md);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden; /* evita desbordes */
+  z-index: var(--z-dropdown);
+}
+
+/* Estado expandido */
+.main-sidebar.expanded {
+  width: 280px; /* ancho abierto */
+}
+
+/* Botón toggle */
+.main-sidebar__toggle-btn {
+  position: absolute;
+  top: 40px;
+  right: -21px; /* mitad del tamaño para centrarlo en el borde */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: right var(--transition-medium);
+}
+
+/* Ajuste del botón en estado expandido */
+.main-sidebar.expanded .main-sidebar__toggle-btn {
+  right: -21px; /* permanece en el mismo punto relativo */
+}
+
+/* Icono dentro del botón */
+.main-sidebar__toggle-btn mat-icon {
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Contenido interior */
+.main-sidebar__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Header con perfil */
+.main-sidebar__header {
+  padding: var(--spacing-md);
+}
+
+/* Enlaces del header */
+.main-sidebar__header a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  color: inherit;
+  transition: justify-content var(--transition-medium);
+}
+
+/* Icono de perfil */
+.main-sidebar__header mat-icon {
+  font-size: 32px;
+}
+
+/* Texto del perfil */
+.main-sidebar__header p {
+  font-size: var(--fs-body);
+  white-space: nowrap;
+  margin: 0;
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity var(--transition-medium),
+    transform var(--transition-medium);
+}
+
+/* Estado colapsado: ocultar texto y centrar icono */
+.main-sidebar:not(.expanded) .main-sidebar__header {
+  padding: var(--spacing-md) 0; /* solo centrar vertical */
+}
+
+.main-sidebar:not(.expanded) .main-sidebar__header a {
+  justify-content: center;
+}
+
+.main-sidebar:not(.expanded) .main-sidebar__header p {
+  opacity: 0;
+  transform: translateX(-10px); /* sutil desplazamiento */
+  width: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* Items de navegación (ejemplo genérico) */
+.main-sidebar__nav {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.main-sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm);
+  transition:
+    background-color var(--transition-short),
+    color var(--transition-short),
+    padding var(--transition-medium);
+}
+
+.main-sidebar__nav-item mat-icon {
+  font-size: 24px;
+}
+
+.main-sidebar:not(.expanded) .main-sidebar__nav-item {
+  justify-content: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.main-sidebar:not(.expanded) .main-sidebar__nav-item span {
+  display: none;
+}
+
+/* Opcional: hover states */
+.main-sidebar__nav-item:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Scrollbar estilizada (opcional) */
+.main-sidebar__nav::-webkit-scrollbar {
+  width: 6px;
+}
+.main-sidebar__nav::-webkit-scrollbar-thumb {
+  background-color: var(--bg-scrollbar);
+  border-radius: 3px;
+}

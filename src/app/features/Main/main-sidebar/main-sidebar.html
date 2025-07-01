@@ -1,0 +1,15 @@
+<nav class="main-sidebar" [class.expanded]="expanded">
+  <button class="main-sidebar__toggle-btn" (click)="expanded = !expanded">
+    <mat-icon class="material-symbols-rounded filled">
+      {{ expanded ? 'arrow_left' : 'arrow_right' }}
+    </mat-icon>
+  </button>
+  <div class="main-sidebar__content">
+    <header class="main-sidebar__header">
+      <a routerLink="/main/profile-management">
+        <mat-icon class="material-symbols-rounded filled">person</mat-icon>
+        <p>Ignacio Villarreal</p>
+      </a>
+    </header>
+  </div>
+</nav>
