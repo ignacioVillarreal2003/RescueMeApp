@@ -1,148 +1,150 @@
-/* Contenedor principal */
 .main-sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 80px; /* ancho cerrado */
+  inset: 0 auto 0 0;
+  width: 76px;
   background-color: var(--bg-layer-4);
   backdrop-filter: var(--effect-blur-md);
-  display: flex;
-  flex-direction: column;
   transition: width var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden; /* evita desbordes */
   z-index: var(--z-dropdown);
 }
 
-/* Estado expandido */
 .main-sidebar.expanded {
-  width: 280px; /* ancho abierto */
+  width: 280px;
 }
 
-/* Botón toggle */
 .main-sidebar__toggle-btn {
   position: absolute;
-  top: 40px;
-  right: -21px; /* mitad del tamaño para centrarlo en el borde */
-  width: 42px;
-  height: 42px;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  right: 0px;
+  transform: translateY(-50%) translateX(50%) scale(1);
   border-radius: 50%;
   background-color: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: right var(--transition-medium);
+  transition: all var(--transition-medium) ease;
 }
 
-/* Ajuste del botón en estado expandido */
-.main-sidebar.expanded .main-sidebar__toggle-btn {
-  right: -21px; /* permanece en el mismo punto relativo */
+.main-sidebar__toggle-btn:hover {
+  transform: translateY(-50%) translateX(50%) scale(1.1);
 }
 
-/* Icono dentro del botón */
+.main-sidebar__toggle-btn:active {
+  transform: translateY(-50%) translateX(50%) scale(0.9);
+}
+
 .main-sidebar__toggle-btn mat-icon {
-  font-size: 32px;
+  --size: 38px;
+  font-size: var(--size);
+  width: var(--size);
+  height: var(--size);
   color: #fff;
 }
 
-/* Contenido interior */
-.main-sidebar__content {
+.main-sidebar__nav {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-md);
   height: 100%;
-  overflow: hidden;
+  padding: var(--spacing-sm);
 }
 
-/* Header con perfil */
 .main-sidebar__header {
-  padding: var(--spacing-md);
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--separator-color);
 }
 
-/* Enlaces del header */
+.main-sidebar__content {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 .main-sidebar__header a {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  text-decoration: none;
-  color: inherit;
-  transition: justify-content var(--transition-medium);
-}
-
-/* Icono de perfil */
-.main-sidebar__header mat-icon {
-  font-size: 32px;
-}
-
-/* Texto del perfil */
-.main-sidebar__header p {
-  font-size: var(--fs-body);
+  gap: 15px;
+  width: 100%;
+  justify-content: flex-start;
   white-space: nowrap;
-  margin: 0;
-  opacity: 1;
-  transform: translateX(0);
-  transition:
-    opacity var(--transition-medium),
-    transform var(--transition-medium);
 }
 
-/* Estado colapsado: ocultar texto y centrar icono */
-.main-sidebar:not(.expanded) .main-sidebar__header {
-  padding: var(--spacing-md) 0; /* solo centrar vertical */
-}
-
-.main-sidebar:not(.expanded) .main-sidebar__header a {
-  justify-content: center;
-}
-
-.main-sidebar:not(.expanded) .main-sidebar__header p {
-  opacity: 0;
-  transform: translateX(-10px); /* sutil desplazamiento */
-  width: 0;
-  margin: 0;
-  pointer-events: none;
-}
-
-/* Items de navegación (ejemplo genérico) */
-.main-sidebar__nav {
-  flex: 1;
-  overflow-y: auto;
-}
-
-.main-sidebar__nav-item {
+.main-sidebar__content a,
+.main-sidebar__footer button {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-sm);
-  transition:
-    background-color var(--transition-short),
-    color var(--transition-short),
-    padding var(--transition-medium);
+  gap: 15px;
+  padding: 10px;
+  transition: all var(--transition-fast) ease;
+  width: 100%;
+  justify-content: flex-start;
+  white-space: nowrap;
 }
 
-.main-sidebar__nav-item mat-icon {
-  font-size: 24px;
+.main-sidebar__content a:hover {
+  background-color: var(--bg-layer-1);
+  border-radius: var(--radius-sm);
 }
 
-.main-sidebar:not(.expanded) .main-sidebar__nav-item {
+.main-sidebar__footer button:hover {
+  background-color: var(--red);
+  border-radius: var(--radius-sm);
+}
+
+.main-sidebar__avatar {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: var(--spacing-sm) 0;
+  background-color: rgb(106, 44, 168);
+  border-radius: var(--radius-circle);
 }
 
-.main-sidebar:not(.expanded) .main-sidebar__nav-item span {
-  display: none;
+.main-sidebar__header mat-icon {
+  --size: 32px;
+  min-width: var(--size);
+  min-height: var(--size);
+  font-size: var(--size);
+  width: var(--size);
+  height: var(--size);
+  color: rgb(201, 147, 255);
 }
 
-/* Opcional: hover states */
-.main-sidebar__nav-item:hover {
-  background-color: var(--bg-hover);
+.main-sidebar__content mat-icon,
+.main-sidebar__footer mat-icon {
+  --size: 32px;
+  font-size: var(--size);
+  min-width: var(--size);
+  min-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  color: var(--color-text-primary);
 }
 
-/* Scrollbar estilizada (opcional) */
-.main-sidebar__nav::-webkit-scrollbar {
-  width: 6px;
+.main-sidebar__header p,
+.main-sidebar__content p,
+.main-sidebar__footer p {
+  font-size: var(--fs-subtitle);
+  color: var(--color-text-primary);
 }
-.main-sidebar__nav::-webkit-scrollbar-thumb {
-  background-color: var(--bg-scrollbar);
-  border-radius: 3px;
+
+.main-sidebar:not(.expanded) p {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity var(--transition-slow), width var(--transition-slow);
+}
+
+.main-sidebar.expanded p {
+  opacity: 1;
+  width: auto;
+  transition: opacity var(--transition-slow), width var(--transition-slow);
 }
